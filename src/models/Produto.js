@@ -47,7 +47,7 @@ export class Produto {
         return this.#caminhoImagem;
     }
     set caminhoImagem(value) {
-        // só valida se value não for undefined
+        // só valida se value não for indefinido
         if (value !== undefined) this.#validarPathImagem(value);
         this.#caminhoImagem = value;
     }

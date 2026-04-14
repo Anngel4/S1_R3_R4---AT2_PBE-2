@@ -11,3 +11,9 @@ GET -> localhost:8000/produtos
 POST -> localhost:8000/produtos  
 PUT -> localhost:8000/produtos/:id  
 DELETE -> localhost:8000/produtos/:id  
+
+## Clientes
+GET -> localhost:8000/clientes  
+POST -> localhost:8000/clientes  
+PUT -> localhost:8000/clientes/:id  
+DELETE -> localhost:8000/clientes/:id

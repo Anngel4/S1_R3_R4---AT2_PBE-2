@@ -1,0 +1,407 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: Atividade clientes/produtos/categorias
+meta:
+  id: wrk_bc69f598bf194ffc8e7a1aabfcf081de
+  created: 1774964022195
+  modified: 1776184414322
+  description: ""
+collection:
+  - name: Categorias
+    meta:
+      id: fld_32a539d583ce4ba3b8f0e264624a270e
+      created: 1774964039028
+      modified: 1776184424365
+      sortKey: -1774964039028
+      description: ""
+    children:
+      - url: localhost:8000/categorias
+        name: Selecionar categoria
+        meta:
+          id: req_d06a5b5d1391440d8cb1b1ce9b45211d
+          created: 1774964022247
+          modified: 1776184503271
+          isPrivate: false
+          description: ""
+          sortKey: -1774964041510
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/categorias
+        name: Criar categoria
+        meta:
+          id: req_f4303df7e743427eba5cc5ad889f3720
+          created: 1774964602972
+          modified: 1776184496462
+          isPrivate: false
+          description: ""
+          sortKey: -1774964041610
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nome": "Roupas",
+            	"descricao": "Camisetassss"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/categorias/2
+        name: Atualizar categoria
+        meta:
+          id: req_ef6d264e863b42f9aa129dfb4371c72f
+          created: 1774964681837
+          modified: 1776184476701
+          isPrivate: false
+          description: ""
+          sortKey: -1774964041710
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nome": "Comidas Tailandesas",
+            	"descricao": "Comidas apimentadas com frango"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/categorias/1
+        name: deletar categoria
+        meta:
+          id: req_62a14c1311cc413f88515cfc09549766
+          created: 1774964749016
+          modified: 1776184443941
+          isPrivate: false
+          description: ""
+          sortKey: -1774964041810
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Produtos
+    meta:
+      id: fld_e5c3f88b8d2d4a61b559641bfa3a9a61
+      created: 1774974965013
+      modified: 1774975001044
+      sortKey: -1774974965013
+      description: ""
+    children:
+      - url: localhost:8000/produtos
+        name: Selecionar produtos
+        meta:
+          id: req_81be4d7acbad43c2a790d09d08fd876e
+          created: 1774974972019
+          modified: 1776184511629
+          isPrivate: false
+          description: ""
+          sortKey: -1774974972019
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/produtos
+        name: Criar produto
+        meta:
+          id: req_cd306674928b4d76a3e35f3201859da8
+          created: 1774975518017
+          modified: 1776184514660
+          isPrivate: false
+          description: ""
+          sortKey: -1774975518017
+        method: POST
+        body:
+          mimeType: multipart/form-data
+          params:
+            - name: idCategoria
+              value: "3"
+              description: ""
+              disabled: false
+            - name: nome
+              value: Camiseta Preta
+              description: ""
+              disabled: false
+            - name: valor
+              value: "209.98"
+              description: ""
+              disabled: false
+            - name: caminhoImagem
+              value: ""
+              description: ""
+              disabled: false
+              fileName: C:\Users\47668960848\Downloads\black shirt.jpg
+              type: file
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/produtos/3
+        name: Deletar produto
+        meta:
+          id: req_60ec925d51a947189275b9af33d30e38
+          created: 1774978252836
+          modified: 1776184518701
+          isPrivate: false
+          description: ""
+          sortKey: -1774975518117
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/produtos/3
+        name: Atualizar produto
+        meta:
+          id: req_9996031ac2514119bdc9cf29f1f51de3
+          created: 1774978321985
+          modified: 1776184525661
+          isPrivate: false
+          description: ""
+          sortKey: -1774978321985
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"idCategoria": "3",
+            	"nome": "Cropped Preto Promocao",
+            	"valor": "199.90"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Clientes
+    meta:
+      id: fld_796420ae5492444a8b4924b0cffd2494
+      created: 1775579699168
+      modified: 1776184426228
+      sortKey: -1775579699168
+      description: ""
+    children:
+      - url: localhost:8000/clientes
+        name: Adicionar cliente
+        meta:
+          id: req_edf948dbd0714fc084cf9206301b9cb8
+          created: 1775578238410
+          modified: 1776184348384
+          isPrivate: false
+          description: ""
+          sortKey: -1775579705024
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "nome": "juao queiroz da Silva",
+              "cpf": "26665764850",
+              "cep": "13170023",
+            	"logradouro": "Avenida dos matos",
+            	"bairro": "Mato",
+            	"cidade": "Sumaré",
+            	"uf": "SP",
+              "numero": "311",
+              "complemento": "Casa",
+              "telefones": ["19242252262", "19224252262"]
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/clientes
+        name: Selecionar clientes
+        meta:
+          id: req_9acd49ac380c423d9b838b98424ccc54
+          created: 1775579711220
+          modified: 1776184333550
+          isPrivate: false
+          description: ""
+          sortKey: -1775579705124
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/clientes/5
+        name: Atualizar cliente
+        meta:
+          id: req_d3e85eda24dd41dca35e0f56e5aeb0c7
+          created: 1775586748938
+          modified: 1776184328377
+          isPrivate: false
+          description: ""
+          sortKey: -1775579705224
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "nome": "Xamuel junior queiroz da Silva",
+              "cpf": "48396721807",
+              "cep": "13170023",
+            	"logradouro": "Avenida dos matos",
+            	"bairro": "Mato",
+            	"cidade": "Sumaré",
+            	"uf": "SP",
+              "numero": "311",
+              "complemento": "Casa",
+              "telefones": ["19242252262", "19224252262"]
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/clientes/3
+        name: Deletar cliente
+        meta:
+          id: req_0ea82e4c54894eec956bce3f002b25f0
+          created: 1775586766049
+          modified: 1776184321899
+          isPrivate: false
+          description: ""
+          sortKey: -1775579705324
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_e6a559b24b466dae88822e0876c57a2ea097e0f5
+    created: 1774964022216
+    modified: 1774964022216
+environments:
+  name: Base Environment
+  meta:
+    id: env_e6a559b24b466dae88822e0876c57a2ea097e0f5
+    created: 1774964022205
+    modified: 1774964022205
+    isPrivate: false
